@@ -12,10 +12,13 @@ author:
       #   department: Department of Human Genetics
       #   url: https://www.mhh.de/en/human-genetics
 
+lang: "de"
+
 website:
   title: "Title"
   sidebar:
     style: "docked"
+    search: false
     contents:
       - auto: "*.{Rmd,qmd}"
 
@@ -25,7 +28,7 @@ twitter-card: true
 
 format:
   html:
-    theme: cosmo
+    theme: litera
     css: styles.css
     embed-resources: true
     mainfont: "'Seravek', 'Gill Sans Nova', 'Ubuntu', 'Calibri', 'DejaVu Sans', 'source-sans-pro', 'sans-serif'"
