@@ -1,0 +1,41 @@
+project:
+  type: website
+
+author:
+  - name: Benedikt Schnur
+    orcid: 0000-0002-1977-7878
+    affiliations:
+      - name: Medizinische Hochschule Hannover (MHH)
+        department: Institut für Humangenetik
+        url: https://www.mhh.de/humangenetik
+      # - name: Hannover Medical School (MHH)
+      #   department: Department of Human Genetics
+      #   url: https://www.mhh.de/en/human-genetics
+
+website:
+  title: "Title"
+  sidebar:
+    style: "docked"
+    contents:
+      - auto: "*.{Rmd,qmd}"
+
+image: "preview.png"
+open-graph: true
+twitter-card: true
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    embed-resources: true
+    mainfont: "'Seravek', 'Gill Sans Nova', 'Ubuntu', 'Calibri', 'DejaVu Sans', 'source-sans-pro', 'sans-serif'"
+    toc: true
+    toc-depth: 2
+    fig-format: retina
+    fig-width: 9.5
+    fig-asp: 0.6
+
+knitr:
+  opts_chunk:
+    dev: svg
+    dev.args: { bg: "transparent" }

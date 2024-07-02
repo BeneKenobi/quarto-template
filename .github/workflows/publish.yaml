@@ -1,0 +1,47 @@
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+name: Quarto Publish
+
+jobs:
+  publish:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install libraries
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libcurl4-openssl-dev libharfbuzz-dev libfribidi-dev
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+      # R
+      # - name: Set up R
+      #   uses: r-lib/actions/setup-r@v2
+      # - name: Install r dependencies
+      #   uses: r-lib/actions/setup-renv@v2
+      #
+      # Python
+      # - name: Setup Poetry
+      #   uses: snok/install-poetry@v1
+      #   with:
+      #     virtualenvs-create: true
+      #     virtualenvs-in-project: true
+      #     installer-parallel: true
+      # - name: Load cached venv
+      #   id: cached-poetry-dependencies
+      #   uses: actions/cache@v3
+      #   with:
+      #     path: .venv
+      #     key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
+      # - name: Install dependencies
+      #   if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+      #   run: poetry install --no-interaction --no-root
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

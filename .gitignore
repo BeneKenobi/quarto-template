@@ -1,0 +1,7 @@
+/.quarto/
+.DS_Store
+*.html
+*_files/
+*_data/
+_site/
+.vscode/
