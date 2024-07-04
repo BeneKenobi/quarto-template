@@ -38,6 +38,8 @@ format:
     fig-format: retina
     fig-width: 9.5
     fig-asp: 0.6
+    link-external-icon: true
+    link-external-newwindow: true
 
 knitr:
   opts_chunk:
