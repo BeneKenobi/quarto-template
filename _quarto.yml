@@ -21,6 +21,7 @@ website:
     search: false
     contents:
       - auto: "*.{Rmd,qmd}"
+  favicon: favicon-32x32.png
 
 image: "preview.png"
 open-graph: true
