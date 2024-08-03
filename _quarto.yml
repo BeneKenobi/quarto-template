@@ -41,6 +41,7 @@ format:
     fig-asp: 0.6
     link-external-icon: true
     link-external-newwindow: true
+    embed-resources: true
 
 knitr:
   opts_chunk:
