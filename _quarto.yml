@@ -31,7 +31,6 @@ format:
   html:
     theme: litera
     css: styles.css
-    embed-resources: true
     mainfont: "'Seravek', 'Gill Sans Nova', 'Ubuntu', 'Calibri', 'DejaVu Sans', 'source-sans-pro', 'sans-serif'"
     tbl-cap-location: bottom
     toc: true
